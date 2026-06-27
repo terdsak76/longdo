@@ -1,0 +1,8 @@
+{
+  "crons": [
+    {
+      "path": "/api/fetch-travel-time",
+      "schedule": "*/30 * * * *"
+    }
+  ]
+}
