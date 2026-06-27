@@ -68,17 +68,17 @@ export default async function handler(request, response) {
   }
 }
 
-const mockRequest = {
-  headers: {
-    get: (name) => name === 'authorization' ? `Bearer ${process.env.CRON_SECRET}` : null
-  }
-};
-
-const mockResponse = {
-  status: (code) => ({
-    json: (data) => console.log(`[Response ${code}]`, JSON.stringify(data, null, 2))
-  })
-};
-
-// Manually trigger the function execution
-handler(mockRequest, mockResponse);
+// const mockRequest = {
+//   headers: {
+//     get: (name) => name === 'authorization' ? `Bearer ${process.env.CRON_SECRET}` : null
+//   }
+// };
+//
+// const mockResponse = {
+//   status: (code) => ({
+//     json: (data) => console.log(`[Response ${code}]`, JSON.stringify(data, null, 2))
+//   })
+// };
+//
+// // Manually trigger the function execution
+// handler(mockRequest, mockResponse);

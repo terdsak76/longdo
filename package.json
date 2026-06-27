@@ -1,10 +1,11 @@
 {
+  "name": "londomap",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview"
+    "start": "node api/fetch-travel-time.js"
   },
   "dependencies": {
-    "astro": "^5.18.2"
+    "@libsql/client": "^0.15.0"
   }
 }
