@@ -23,7 +23,7 @@ export default async function handler(request, response) {
 
   // Configurations
   const API_KEY = '00d8e7fdc70c1b57564c25fe0b953798';
-  const fromLat = 13.72427, fromLon = 100.53726;
+  const fromLat = 13.771464, fromLon = 100.4620;
   const toLat = 13.72669, toLon = 100.54061;
   const url = `https://api.longdo.com/RouteService/geojson/route?flat=${fromLat}&flon=${fromLon}&tlat=${toLat}&tlon=${toLon}&mode=t&key=${API_KEY}`;
 
