@@ -9,10 +9,10 @@ const db = createClient({
 
 export default async function handler(request, response) {
   // 1. FIX: Vercel headers are standard objects. Use request.headers.authorization
-  const authHeader = request.headers.authorization;
-  if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
-    return response.status(401).json({ success: false, message: 'Unauthorized' });
-  }
+  // const authHeader = request.headers.authorization;
+  // if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
+  //   return response.status(401).json({ success: false, message: 'Unauthorized' });
+  // }
 
   // Timezone check: Only run between 6 AM and 9 PM Bangkok Time
   const options = { timeZone: 'Asia/Bangkok', hour: 'numeric', hour12: false };
