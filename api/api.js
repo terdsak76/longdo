@@ -44,9 +44,9 @@ export default async function handler(request, response) {
     }
 
     // 2. FIX: Longdo returns data as an array. You must target the first element [0]
-    const routeInfo = result.data[0];
-    const distanceKm = parseFloat((routeInfo.distance / 1000).toFixed(2));
-    const durationMins = Math.round(routeInfo.interval / 60);
+    const routeInfo = result['data'];
+    const distanceKm = parseFloat((routeInfo['distance'] / 1000).toFixed(2));
+    const durationMins = Math.round(routeInfo['interval'] / 60);
 
     // 3. Insert data into Turso Database
     // Note: Make sure your Turso 'travel_logs' table has the from_lat, from_lon, to_lat, to_lon columns!
